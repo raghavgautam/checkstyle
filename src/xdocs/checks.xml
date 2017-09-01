@@ -255,6 +255,10 @@
         <td>Check that method/constructor/catch/foreach parameters are final.</td>
       </tr>
       <tr>
+        <td><a href="config_misc.html#BanishedMethods">BanishedMethods</a></td>
+        <td>Check that banished methods/constructors are not being used.</td>
+      </tr>
+      <tr>
         <td><a href="config_whitespace.html#GenericWhitespace">GenericWhitespace</a></td>
         <td>Checks that the whitespace around the Generic tokens &lt; and &gt; are
         correct to the <i>typical</i> convention.</td>

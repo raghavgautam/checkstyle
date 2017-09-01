@@ -4,6 +4,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 package com.puppycrawl.tools.checkstyle.checks.misc.finalparameters;
 
+import org.junit.Assert;
+
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import java.awt.event.ActionEvent;
@@ -17,6 +19,8 @@ class InputFinalParameters
     /** no param constructor */
     InputFinalParameters()
     {
+        Assert.assertTrue(1!=2);
+        Assert.assertTrue("Good assert.", true);
     }
 
     /** non final param constructor */

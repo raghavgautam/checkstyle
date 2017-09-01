@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE BanishedMethods SYSTEM "../../../../../../../../../../src/main/resources/com/puppycrawl/tools/checkstyle/banished_methods_1_0.dtd">
+
+<BanishedMethods>
+    <BanishedMethod methodName="System\.exit" argCount=".*"/>
+    <BanishedMethod methodName=".*assertTrue" argCount="1"/>
+    <BanishedMethod methodName="BannedConstructor" argCount="1"/>
+</BanishedMethods>

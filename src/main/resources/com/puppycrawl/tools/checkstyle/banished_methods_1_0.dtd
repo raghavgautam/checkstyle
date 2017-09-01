@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Add the following to any file that is to be validated against this DTD:
+
+<!DOCTYPE BanishedMethods PUBLIC
+    "-//Puppy Crawl//DTD Banished Methods 1.0//EN"
+    "http://checkstyle.sourceforge.net/dtds/banished_methods_1_0.dtd">
+-->
+
+<!ELEMENT BanishedMethods (BanishedMethod*)>
+
+<!ELEMENT BanishedMethod EMPTY>
+<!ATTLIST BanishedMethod methodName CDATA #REQUIRED
+                         argCount CDATA #REQUIRED>

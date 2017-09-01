@@ -389,6 +389,10 @@
     <module name="CommentsIndentation"/>
     <module name="DescendantToken"/>
     <module name="FinalParameters">
+    <module name="BanishedMethods">
+      <property name="file" value="${checkstyle.banished_methods.file}"/>
+    </module>
+
       <!--
         we will not use that fanatic validation, extra modifiers pollute a code
         it is better to use extra validation(Check) that argument is reassigned

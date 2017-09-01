@@ -22,6 +22,7 @@ package com.puppycrawl.tools.checkstyle.utils;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
@@ -542,5 +543,34 @@ public final class CommonUtils {
             }
         }
         return isInt;
+    }
+
+    /**
+     * Checks if config file with given fileName exists.
+     * @param fileName name of the config file.
+     * @return true if config file exists, otherwise false
+     */
+    public static boolean configFileExists(String fileName) {
+        boolean configFileExists = true;
+        InputStream sourceInput = null;
+        try {
+            final URI uriByFilename = getUriByFilename(fileName);
+            final URL url = uriByFilename.toURL();
+            sourceInput = url.openStream();
+        }
+        catch (CheckstyleException | IOException ignored) {
+            configFileExists = false;
+        }
+        finally {
+            if (sourceInput != null) {
+                try {
+                    sourceInput.close();
+                }
+                catch (IOException ignored) {
+                    configFileExists = false;
+                }
+            }
+        }
+        return configFileExists;
     }
 }
